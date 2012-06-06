@@ -112,15 +112,6 @@ Here are a few `displayType`-specific options:
     <td>"bottom"</td>
     <td>Defines where the text is displayed. Acceptable options for "caption" type displays are "top" and "bottom".</td>
   </tr>
-  <!--
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  -->
 </table>
 
 ##Types
