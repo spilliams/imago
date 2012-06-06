@@ -9,7 +9,7 @@ If you search for "jQuery image tooltip" what you find is 2356874 different ways
 
 ##Installation
 
-Include `jquery.imago.js` or `jquery.imago.min.js` and `jquery.imago.css` in your `head` tag.
+Include `jquery.imago.js` and `jquery.imago.css` in your `head` tag.
 
 ##Usage
 
