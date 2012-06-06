@@ -5,7 +5,8 @@ Note that this plugin is currently unimplemented. The documentation below curren
 
 ##About
 
-If you search for "jQuery image tooltip" what you find is 2356874 different ways to put an image inside a tooltip that shows only when you hover over a link. This is not what this is. Imago is about defining an area inside an image which is linked to a caption or callout. Common example: Facebook image tags.
+If you search for "jQuery image tooltip" what you find is 2356874 different ways to put an image inside a tooltip that shows only when you hover over a link. This is not what this is. Imago is about defining an area inside an image which is linked to a caption or callout.  
+Common example: Facebook image tags.
 
 ##Installation
 
