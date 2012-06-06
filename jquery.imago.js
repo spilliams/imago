@@ -1,3 +1,9 @@
+/*
+ * Created in June 2012 by Spencer Williams <s@spencerenglish.com>.
+ * Use at your own peril. This code is available unlicensed.
+ * github.com/spilliams/imago.
+ */
+
 (function($){
   var methods = {
     init : function( options ) {
