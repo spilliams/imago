@@ -21,8 +21,6 @@ See a list of other methods below.
 
 ##Options
 
-(Proposed features denoted *)
-
 <table>
   <tr>
     <th>option</th>
