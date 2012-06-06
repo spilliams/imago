@@ -118,7 +118,7 @@ Here are a few `displayType`-specific options:
 
 ###DataPoint
 
-`{x:4,y:8,caption:"Here lyes the bodie of a grate mann"}`
+`{tag:{x:4,y:8},text:"Here lyes the bodie of a grate mann"}`
 
 ##Events
 
