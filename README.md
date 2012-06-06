@@ -1,4 +1,161 @@
-imago
-=====
+#imago
 
 jQuery plugin for creating image callouts and tooltips
+
+##About
+
+If you search for "jQuery image tooltip" what you find is 2356874 different ways to put an image inside a tooltip that shows only when you hover over a link. This is not what this is. Imago is about defining an area inside an image which is linked to a caption or callout. Common example: Facebook image tags.
+
+##Installation
+
+Include `jquery.imago.js` or `jquery.imago.min.js` and `jquery.imago.css` in your `head` tag.
+
+##Usage
+
+Basic setup:
+
+    $("#myImage").imago({options});
+    
+See a list of other methods below.
+
+##Options
+
+(Proposed features denoted *)
+
+<table>
+  <tr>
+    <th>option</th>
+    <th>type</th>
+    <th>default</th>
+    <th>required</th>
+    <th>description</th>
+  </tr>
+  <tr>
+    <td>dataPoints</td>
+    <td>array</td>
+    <td>[]</td>
+    <td>no</td>
+    <td>Initial callout data.</td>
+  </tr>
+  <tr>
+    <td>displayType</td>
+    <td>string</td>
+    <td>"callout"</td>
+    <td>yes</td>
+    <td>Defines how the caption text is displayed. Other acceptable types are "list", "tooltip" and "caption".</td>
+  </tr>
+  <tr>
+    <td>textOpacity</td>
+    <td>number</td>
+    <td>1</td>
+    <td>yes</td>
+    <td>Defines the opacity of the caption text and callout graphics (if any). This opacity only applies when neither text nor tag are active.</td>
+  </tr>
+  <tr>
+    <td>tagOpacity</td>
+    <td>number</td>
+    <td>0.5</td>
+    <td>yes</td>
+    <td>Defines the opacity of the tag graphics. This opacity only applies when neither the text nor the tag are active.</td>
+  </tr>
+  <tr>
+    <td>activateOn</td>
+    <td>string</td>
+    <td>"hover"</td>
+    <td>yes</td>
+    <td>Defines when a text or tag will activate. Acceptable options are "hover", "click" or "none" (always active).</td>
+  </tr>
+</table>
+
+Here are a few `displayType`-specific options:
+
+<table>
+  <tr>
+    <th>option</th>
+    <th>type</th>
+    <th>default</th>
+    <th>required</th>
+    <th>description</th>
+  </tr>
+  <tr>
+    <td colspan=5>callout</td>
+  </tr>
+  <tr>
+    <td>displayPosition</td>
+    <td>string</td>
+    <td>"top"</td>
+    <td>yes</td>
+    <td>Defines where the text is displayed. Acceptable options for "callout" type displays are "top" and "bottom".</td>
+  </tr>
+  <tr>
+    <td colspan=5>list</td>
+  </tr>
+  <tr>
+    <td>displayPosition</td>
+    <td>string</td>
+    <td>"right"</td>
+    <td>yes</td>
+    <td>Defines where the text is displayed. Acceptable options for "list" type displays are "left" and "right".</td>
+  </tr>
+  <tr>
+    <td colspan=5>tooltip</td>
+  </tr>
+  <tr>
+    <td>displayPosition</td>
+    <td>string</td>
+    <td>""</td>
+    <td>no</td>
+    <td>Defines where the text is displayed.</td>
+  </tr>
+  <tr>
+    <td colspan=5>caption</td>
+  </tr>
+  <tr>
+    <td>captionNav</td>
+    <td>boolean</td>
+    <td>false</td>
+    <td>yes</td>
+    <td>Show caption navigation arrows?</td>
+  </tr>
+  <tr>
+    <td>displayPosition</td>
+    <td>string</td>
+    <td>"bottom"</td>
+    <td>yes</td>
+    <td>Defines where the text is displayed. Acceptable options for "caption" type displays are "top" and "bottom".</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+##Types
+
+###DataPoint
+
+`{x:4,y:8,caption:"Here lyes the bodie of a grate mann"}`
+
+##Methods
+
+    // get the state of the imago
+    $("#myImage").imago('options');                   // returns the options object as it currently stands
+    $("#myImage").imago('dataPoints');                // returns just the data points of the imago
+    
+    // change the state of the imago
+    $("#myImage").imago('addPoint',dataPoint);
+    $("#myImage").imago('removePoint',dataPoint);
+    $("#myImage").imago('removePoint',integer);       // integer specifies index of dataPoint
+    $("#myImage").imago('dataPoints',array);
+    
+    $("#myImage").imago('activatePoint',dataPoint);
+    $("#myImage").imago('activatePoint',integer);     // integer specifies index of dataPoint
+    $("#myImage").imago('deactivatePoint',dataPoint);
+    $("#myImage").imago('deactivatePoint',integer);   // integer specifies index of dataPoint
+
+##Future
+
+- Better abstraction for opacity/activation rules.
