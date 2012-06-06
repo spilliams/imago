@@ -94,7 +94,7 @@ Here are a few `displayType`-specific options:
     <td>displayPosition</td>
     <td>string</td>
     <td>""</td>
-    <td>Defines where the text is displayed.</td>
+    <td>Defines where the text is displayed. Unnecessary for "tooltip" type displays.</td>
   </tr>
   <tr>
     <td colspan=5>caption</td>
