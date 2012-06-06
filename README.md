@@ -1,6 +1,7 @@
 #imago
 
-jQuery plugin for creating image callouts and tooltips
+jQuery plugin for creating image callouts and tooltips.  
+Note that this plugin is currently unimplemented. The documentation below currently serves as a roadmap.
 
 ##About
 
