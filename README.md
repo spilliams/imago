@@ -129,6 +129,10 @@ Here are a few `displayType`-specific options:
 
 `{x:4,y:8,caption:"Here lyes the bodie of a grate mann"}`
 
+##Events
+
+todo
+
 ##Methods
 
     // get the state of the imago
@@ -156,4 +160,3 @@ Upon initializing a new imago with data points, the image is embedded in a `div.
 ##Future
 
 - Better abstraction for opacity/activation rules.
-- event hooks
