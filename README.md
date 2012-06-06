@@ -145,7 +145,15 @@ Here are a few `displayType`-specific options:
     $("#myImage").imago('activatePoint',integer);     // integer specifies index of dataPoint
     $("#myImage").imago('deactivatePoint',dataPoint);
     $("#myImage").imago('deactivatePoint',integer);   // integer specifies index of dataPoint
+    
+    $("#myImage").imago('navLeft');                   // simulate clicking the left nav button
+    $("#myImage").imago('navRight');                  // simulate clicking the right nav button
+
+##Custom Styling, Or A Look Inside
+
+Upon initializing a new imago with data points, the image is embedded in a `div.imago`. Each data-point's text is placed within a `TAG#imago-text-ID.imago-text`, where ID is the index of the text's data point, and TAG is either `div` or `li` depending on the `displayType`. Tags on the image are inside `div#imago-tag-ID.imago-tag`. If `displayType` is "callout", the line connecting the tag and text is `div#imago-callout-ID.imago-callout`. Navigation controls are in `div#imago-nav-DIR.imago-nav`, where DIR is either "left" or "right".
 
 ##Future
 
 - Better abstraction for opacity/activation rules.
+- event hooks
