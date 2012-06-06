@@ -26,42 +26,36 @@ See a list of other methods below.
     <th>option</th>
     <th>type</th>
     <th>default</th>
-    <th>required</th>
     <th>description</th>
   </tr>
   <tr>
     <td>dataPoints</td>
     <td>array</td>
     <td>[]</td>
-    <td>no</td>
     <td>Initial callout data.</td>
   </tr>
   <tr>
     <td>displayType</td>
     <td>string</td>
     <td>"callout"</td>
-    <td>yes</td>
     <td>Defines how the caption text is displayed. Other acceptable types are "list", "tooltip" and "caption".</td>
   </tr>
   <tr>
     <td>textOpacity</td>
     <td>number</td>
     <td>1</td>
-    <td>yes</td>
     <td>Defines the opacity of the caption text and callout graphics (if any). This opacity only applies when neither text nor tag are active.</td>
   </tr>
   <tr>
     <td>tagOpacity</td>
     <td>number</td>
     <td>0.5</td>
-    <td>yes</td>
     <td>Defines the opacity of the tag graphics. This opacity only applies when neither the text nor the tag are active.</td>
   </tr>
   <tr>
     <td>activateOn</td>
     <td>string</td>
     <td>"hover"</td>
-    <td>yes</td>
     <td>Defines when a text or tag will activate. Acceptable options are "hover", "click" or "none" (always active).</td>
   </tr>
 </table>
@@ -73,7 +67,6 @@ Here are a few `displayType`-specific options:
     <th>option</th>
     <th>type</th>
     <th>default</th>
-    <th>required</th>
     <th>description</th>
   </tr>
   <tr>
@@ -83,7 +76,6 @@ Here are a few `displayType`-specific options:
     <td>displayPosition</td>
     <td>string</td>
     <td>"top"</td>
-    <td>yes</td>
     <td>Defines where the text is displayed. Acceptable options for "callout" type displays are "top" and "bottom".</td>
   </tr>
   <tr>
@@ -93,7 +85,6 @@ Here are a few `displayType`-specific options:
     <td>displayPosition</td>
     <td>string</td>
     <td>"right"</td>
-    <td>yes</td>
     <td>Defines where the text is displayed. Acceptable options for "list" type displays are "left" and "right".</td>
   </tr>
   <tr>
@@ -103,7 +94,6 @@ Here are a few `displayType`-specific options:
     <td>displayPosition</td>
     <td>string</td>
     <td>""</td>
-    <td>no</td>
     <td>Defines where the text is displayed.</td>
   </tr>
   <tr>
@@ -113,16 +103,15 @@ Here are a few `displayType`-specific options:
     <td>captionNav</td>
     <td>boolean</td>
     <td>false</td>
-    <td>yes</td>
     <td>Show caption navigation arrows?</td>
   </tr>
   <tr>
     <td>displayPosition</td>
     <td>string</td>
     <td>"bottom"</td>
-    <td>yes</td>
     <td>Defines where the text is displayed. Acceptable options for "caption" type displays are "top" and "bottom".</td>
   </tr>
+  <!--
   <tr>
     <td></td>
     <td></td>
@@ -130,6 +119,7 @@ Here are a few `displayType`-specific options:
     <td></td>
     <td></td>
   </tr>
+  -->
 </table>
 
 ##Types
