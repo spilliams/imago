@@ -146,7 +146,8 @@ todo
 
 ##Custom Styling, Or A Look Inside
 
-Upon initializing a new imago with data points, the image is embedded in a `div.imago`. Each data-point's text is placed within a `TAG#imago-text-ID.imago-text`, where ID is the index of the text's data point, and TAG is either `div` or `li` depending on the `displayType`. Tags on the image are inside `div#imago-tag-ID.imago-tag`. If `displayType` is "callout", the line connecting the tag and text is `div#imago-callout-ID.imago-callout`. Navigation controls are in `div#imago-nav-DIR.imago-nav`, where DIR is either "left" or "right".
+Upon initializing a new imago with data points, the image is embedded in a `div.imago`. Each data-point's text is placed within a `TAG#imago-text-ID.imago-text`, where ID is the index of the text's data point, and TAG is either `div` or `li` depending on the `displayType`. Tags on the image are inside `div#imago-tag-ID.imago-tag`. If `displayType` is "callout", the line connecting the tag and text is `div#imago-callout-ID.imago-callout`. Active texts and tags get `.imago-active`.  
+Navigation controls are in `div#imago-nav-DIR.imago-nav`, where DIR is either "left" or "right".
 
 ##Future
 
