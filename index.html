@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>imago example</title>
+  <link rel="stylesheet" href="jquery.imago.css" type="text/css" media="all" charset="utf-8">
+  <style type="text/css" media="screen">
+    
+  </style>
+</head>
+<body id="index" onload="">
+  
+  <h1>jQuery Imago</h1>
+  <p>jQuery plugin for creating image callouts and tooltips.</p>
+  
+  <h2>Examples</h2>
+  
+  <img src="festival.jpg" class="example" id="example-1">
+  <pre>
+    
+  </pre>
+  
+  <script src="jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="jquery.imago.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    (function($){
+      $(document).ready(function(){
+        $("img#example-1").imago({dataPoints:{tag:{x:4,y:8,width:16,height:16},text:"Here lyes the bodie of a grate mann"}});
+      });
+    })(jQuery);
+  </script>
+</body>
+</html>

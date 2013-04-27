@@ -1,10 +1,14 @@
 /*
- * Created in June 2012 by Spencer Williams <s@spencerenglish.com>.
- * Use at your own peril. This code is available unlicensed.
- * github.com/spilliams/imago.
+ * jQuery Imago plugin
+ * Author: Spencer Williams <s@spencerenglish.com>.
+ * Version: 1.0
+ * License: MIT (see LICENSE file for more details)
+ * Source: http://github.com/spilliams/imago.
  */
 
 (function($){
+  var counter = 0;
+  var imagos = {};
   var methods = {
     init : function( options ) {
       // set up default options
@@ -15,62 +19,102 @@
         tagOpacity: 0.5,
         activateOn: "hover",
         displayPosition: "top",
-        captionNav: false
+        captionNav: false,
       };
-      if (options.displayType && options.displayType != defaults.displayType) {
-        displayPositionDefaults = {list:"right",tooltip:"",caption:"bottom"}
-        defaults.displayPosition = displayPositionDefaults[options.displayType];
-      }
+      if (!options) options = defaults;
+      var displayPositionDefaults = {callout:"top",list:"right",tooltip:"",caption:"bottom"};
+      defaults.displayPosition = displayPositionDefaults[options.displayType];
       var options = $.extend(defaults,options)
       
       // use options on this
       return this.each(function() {
-        obj = $(this);
-
-        // TODO do stuff to obj
+        var id = $(this).attr("id");
+        if ("undefined" === typeof id) {
+          id = "imago-"+counter;
+          counter++;
+          $(this).attr("id",id);
+        }
         
+        if ($(this).closest('div.imago').length != 0) return $(this);
+        
+        var $div = $("<div class='imago'></div>");
+        var $placeholder = $("<div id='imago-placeholder'></div>");
+        $(this).after($placeholder);
+        $div.append($(this));
+        $placeholder.after($div);
+        $placeholder.remove();
+        
+        imagos[id] = options;
+        
+        return $(this);
       }); // this.each
     }, // init
     dataPoints : function( dataPoints ) {
       return this.each(function() {
-        obj = $(this);
+        var id = $(this).attr("id");
+        var imago = imagos[id];
         if (typeof dataPoints != "undefined") {
-          // TODO remove all data points
-          // TODO add each data point
-          return obj;
-        } else {
-          // TODO return dataPoints
+          imago.dataPoints = dataPoints;
         }
+        $(this).imago('render');
+        return imago.dataPoints;
       });
     }, // dataPoints
     addPoint : function( dataPoint ) {
       return this.each(function() {
-        obj = $(this);
-        // TODO add data point
-        return obj;
+        var id = $(this).attr("id");
+        var imago = imagos[id];
+        imago.dataPoints.push(dataPoint);
+        $(this).imago('render');
+        return $(this);
       });
     }, // addPoint
-    removePoint : function( dataPointOrInteger ) {
+    removePoint : function( dataPoint ) {
       return this.each(function() {
-        obj = $(this);
-        // TODO remove point
-        return obj;
+        var id = $(this).attr("id");
+        var imago = imagos[id];
+        // TODO
+        $(this).imago('render');
+        return $(this);
       });
     }, // removePoint
-    activatePoint: function( dataPointOrInteger ) {
+    activatePoint: function( dataPoint ) {
       return this.each(function() {
-        obj = $(this);
-        // TODO activate point
-        return obj;
+        var id = $(this).attr("id");
+        var imago = imagos[id];
+        // TODO
+        $(this).imago('render');
+        return $(this);
       });
     }, // activatePoint
-    deactivatePoint: function( dataPointOrInteger ) {
+    deactivatePoint: function( dataPoint ) {
       return this.each(function() {
-        obj = $(this);
-        // TODO deactivate point
-        return obj;
+        var id = $(this).attr("id");
+        var imago = imagos[id];
+        // TODO
+        $(this).imago('render');
+        return $(this);
       });
     }, // deactivatePoint
+    render: function() {
+      return this.each(function() {
+        var id = $(this).attr("id");
+        var imago = imagos[id];
+        var $root = $(this).closest("div.imago").first();
+        
+        // remove any current tags
+        $root.find(".imago-tags").remove();
+        // build new tags
+        var $tags = "<div class='imago-tags'></div>"
+        
+        // remove any current texts
+        $root.fing(".imago-texts").remove();
+        // build new texts
+        // TODO
+        
+        return $(this);
+      });
+    }, // render
   }
   
   $.fn.imago = function(method) {
