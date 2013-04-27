@@ -15,7 +15,11 @@ Include `jquery.imago.js` and `jquery.imago.css` in your `head` tag.
 
 ##Usage
 
-Basic setup:
+Given your current markup:
+
+    <img src="myImage.jpg" id="myImage">
+
+Initialize a new imago with any of these:
 
     $("#myImage").imago();
     $("#myImage").imago({displayType:"list"});
@@ -26,7 +30,7 @@ Basic setup:
         {tag:{left:10,top:40,width:16,height:16},text:"1808-1839"},
       ],
     });
-    
+
 See a list of other methods below.
 
 ##Options
